@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^/?(.*) https://www.k2d.pl$1 [R,L]

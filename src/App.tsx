@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
-import { Header } from './Components/Header/Header';
+import './App.scss';
+import { Placeholder } from './Components/Placeholder/Placeholder';
+
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
+    <div className="app">
+      <Placeholder/>
     </div>
   );
 }

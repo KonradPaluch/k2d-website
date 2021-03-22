@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.scss';
-import { Placeholder } from './Components/Placeholder/Placeholder';
+import { WelcomePage } from './Components/WelcomePage/WelcomePage';
 
 
 function App() {
   return (
     <div className="app">
-      <Placeholder/>
+      <WelcomePage/>
     </div>
   );
 }

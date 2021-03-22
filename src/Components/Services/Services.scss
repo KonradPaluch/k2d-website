@@ -1,0 +1,50 @@
+.services-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 8rem;
+
+    .services-title{
+        font-size: 2rem;
+    }
+
+    .services-details{
+        display: flex;
+        flex-direction: row;
+
+        .services-description{
+            text-align: justify;
+            margin-left: 0;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            width: 50%;
+        }
+
+        .services-list{
+            margin-left: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 1.5rem;
+            flex-shrink: 1;
+            list-style: none; /* Remove default bullets */
+
+            & li span {
+                margin-left: 1rem;
+            }
+            
+            & li::before {
+                content: "\25CF";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                color: rgb(255,124,82); /* Change the color */
+                // font-weight: bold; /* If you want it to be bold */
+                display: inline-block; /* Needed to add space between the bullet and the text */
+                width: 1em; /* Also needed for space (tweak if needed) */
+                margin-left: -2.5rem; /* Also needed for space (tweak if needed) */
+            }
+
+            
+        }
+    }
+
+}

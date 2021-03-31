@@ -1,12 +1,19 @@
 import React from 'react';
 import './App.scss';
-import { WelcomePage } from './Components/WelcomePage/WelcomePage';
+
+import { Header } from './Components/Header/Header';
+import { Hero } from './Components/Hero/Hero'
+
 
 
 function App() {
   return (
     <div className="app">
-      <WelcomePage/>
+      <Header/>
+      <Hero/>
+      {/*<Services/>
+      <Contact/>
+      <Footer/> */}
     </div>
   );
 }

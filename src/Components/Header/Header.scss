@@ -1,24 +1,108 @@
-.header{
-    color: black;
-    width: 100%;
-    position: fixed;
-    top: 0;
+.m-header__container{ 
     display: flex;
-    justify-content: center;
-    background-color: #ffffff;
-    box-shadow: 0 2rem 2rem 2rem #ffffff ;
-        
-    .header-company{
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        margin-top: 0.5rem;
-        
-        .header-logo{
-            margin-right: 0.5rem;
+    align-items: center;
+    padding: 2rem 3rem;
+    place-content: space-between;
+}
+
+.m-header__navBar{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    &.open {
+        display: unset;
+        .a-navBar__background{
+            background-color: grey;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.5;
+            height: 100%;
+            width: 100%;
         }
-        
+        .a-navBar__controls{
+            position: absolute;
+            top: 0;
+            right:0;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            background: white;
+            z-index: 999;
+        }
+    } 
+}
+
+.a-navBar__button{
+    cursor: pointer;
+}
+
+.a-navBar__list{
+    margin: 3em;
+    padding: 0;
+    list-style-type: none;
+    height: fit-content;
+    li{
+        margin-bottom: 3em;
+        font-size: 1rem;
     }
+}
+
+.a-navBar__close{
+    padding: 1em 1em;
+    margin: 2em 2em;
+    cursor: pointer;
+    height: fit-content;
+}
+
+@media only screen and (min-width: 680px){
+    
+    .m-header__navBar{
+        display: block;
+        position: unset;
+        height: unset;
+        width: unset;
+
+
+        &.open .a-navBar__controls{
+            position: inherit;
+        }
+    
+        .a-navBar__list{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0;
+            li{
+                margin: 0 1.5em;
+            }
+        }
+
+    }
+
+    .a-navBar__button{
+        display: none;
+    }
+    
+    .a-navBar__close{
+        display: none;
+    }
+
+    
+    .a-navBar__background{
+        display: none;
+    }
+} 
+
+@media only screen and (min-width: 1400px){
+    .m-header__container{ 
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 5rem;
+        place-content: space-between;
+    }
+
 }

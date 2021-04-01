@@ -5,16 +5,60 @@
     place-content: space-between;
 }
 
+@keyframes appear{
+    from { 
+        opacity: 0; 
+    }
+    to {  
+        opacity: 0.5; 
+    }
+}
+@keyframes hide{
+    from { 
+        opacity: 0.5; 
+    }
+    to {  
+        opacity: 0; 
+    }
+}
+
+@keyframes slide-right{
+    from { 
+        position: absolute;
+        right: -300px; 
+    }
+    to {  
+        position: absolute;
+        right: 0; 
+    }
+}
+@keyframes unslide-right {
+    from { 
+        position: absolute;
+        right: 0; 
+    }
+    to {
+        position: absolute;
+        right: -300px;
+    }
+}
+
+
 .m-header__navBar{
-    display: none;
+
+    &.hidden{
+        display: none;
+    }
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    &.open {
-        display: unset;
+
+    &.close {
         .a-navBar__background{
+            animation-name: hide;
+            animation-duration: 0.5s;
             background-color: grey;
             position: absolute;
             top: 0;
@@ -24,6 +68,36 @@
             width: 100%;
         }
         .a-navBar__controls{
+            animation-name: unslide-right;
+            animation-duration: 0.5s;
+            position: absolute;
+            top: 0;
+            right:0;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            background: white;
+            z-index: 999;
+        }
+    }
+
+
+    &.open {
+        display: unset;
+        .a-navBar__background{
+            animation-name: appear;
+            animation-duration: 0.5s;
+            background-color: grey;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.5;
+            height: 100%;
+            width: 100%;
+        }
+        .a-navBar__controls{
+            animation-name: slide-right;
+            animation-duration: 0.5s;
             position: absolute;
             top: 0;
             right:0;
@@ -61,11 +135,12 @@
 @media only screen and (min-width: 680px){
     
     .m-header__navBar{
-        display: block;
         position: unset;
         height: unset;
         width: unset;
-
+        &.hidden{
+            display: block;
+        }
 
         &.open .a-navBar__controls{
             position: inherit;

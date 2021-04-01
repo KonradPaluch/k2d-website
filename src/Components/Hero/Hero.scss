@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+.m-hero__container{
+    margin-top: 8em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: poppins;
+
+    .a-hero__main{
+        padding: 0 0.6em;
+        width: fit-content;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.6em;
+    }
+    
+    .a-hero__desc{
+        padding: 0 2em;
+        text-align: center;
+        font-weight: 400;
+        margin-top: 3em;
+        font-size: 0.8em;
+        color: #4B4B4B;
+    }
+    
+    .a-hero__cta{
+        background: none;
+        border: solid #0083CE 3px;
+        border-radius: 25px;
+        width: fit-content;
+        font-family: poppins;
+        font-weight: 700;
+        font-size: 1em;
+        margin-top: 3em;
+
+        .a-hero__text{
+            color: #0083CE;
+            padding: 0.8em;
+        }
+    }
+
+    .a-hero__scroll{
+        margin-top: 3em;
+    }
+
+}

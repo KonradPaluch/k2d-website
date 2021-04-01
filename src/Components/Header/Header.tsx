@@ -5,21 +5,26 @@ import { ReactComponent as BurgerMenu } from '../Assets/burger-menu.svg';
 import { ReactComponent as CloseMenu } from '../Assets/closeMenu.svg';
 
 export const Header : React.FC = () => {
-    const [navBarMod, setNabVarMod] = useState('')
+    const [navBarMod, setNavBarMod] = useState('hidden')
 
     const showMenu = () => {
-        console.log('Should open');
-        setNabVarMod('open');
+        setNavBarMod('open');
     }
     const hideMenu = () => { 
-        setNabVarMod('');
+        setNavBarMod('close');
     }
+    const noDisplay = () => {
+        if(navBarMod === 'close'){
+            setNavBarMod('close hidden');
+        }
+    }
+
     
     return( 
         <div className='m-header__container'>
             <CompanyLogo/>
             <div className='a-navBar__button' onClick={()=>{showMenu()}}> <BurgerMenu/></div>
-            <div className={`m-header__navBar ${navBarMod}`}>
+            <div className={`m-header__navBar ${navBarMod}`} onAnimationEnd={()=>{noDisplay()}}>
                 <div onClick={()=>{hideMenu()}} className='a-navBar__background'/>
                 <div className='a-navBar__controls'>
                     <ul className='a-navBar__list'>

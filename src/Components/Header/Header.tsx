@@ -15,13 +15,13 @@ export const Header : React.FC = () => {
     }
     const noDisplay = () => {
         if(navBarMod === 'close'){
-            setNavBarMod('close hidden');
+            setNavBarMod('hidden');
         }
     }
 
     
     return( 
-        <div className='m-header__container'>
+        <section className='m-header__container'>
             <CompanyLogo/>
             <div className='a-navBar__button' onClick={()=>{showMenu()}}> <BurgerMenu/></div>
             <div className={`m-header__navBar ${navBarMod}`} onAnimationEnd={()=>{noDisplay()}}>
@@ -35,6 +35,6 @@ export const Header : React.FC = () => {
                     <div className='a-navBar__close' onClick={()=>{hideMenu()}}><CloseMenu/></div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

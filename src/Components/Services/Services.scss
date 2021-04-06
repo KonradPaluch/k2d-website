@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+.m-services__container{
+    background-color: #4B4B4B;
+    color: #FFFFFF;
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: poppins;
+
+    .a-services__title{
+        margin-top: 3em;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .m-services__texts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 8em;
+    
+        .a-services__list{
+            margin: 2em 0;
+            padding: 0 3em;
+            list-style-image: none;
+    
+            li{
+                margin-bottom: 2em;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+    
+                img{
+                    width: 16px;
+                    height: 16px;
+                }
+    
+                span{
+                    margin-left: 1em;
+                }
+            }
+        }
+    
+        .a-services__desc{
+            padding: 0 4em;
+            font-size: 0.9em;
+        }
+    }
+}
+
+@media only screen and (min-width: 900px){
+
+    .m-services__container{
+    
+    
+        .a-services__title{
+            font-size: 1.8em;
+        }
+    
+        .m-services__texts{
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+            margin-top: 5em;
+            
+            .a-services__list{
+                margin: 0;
+                padding: 0;
+                width: 40%;
+                // li{
+                    
+                //     img{
+    
+                //     }
+        
+                //     span{
+    
+                //     }
+                // }
+            }
+        
+            .a-services__desc{
+                padding: 0;
+                font-size: 1em;
+                width: 40%;
+            }
+        }
+        
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .m-services__container{
+    
+    
+        .a-services__title{
+            font-size: 2em;
+        }
+    
+        .m-services__texts{
+
+            font-size: 1.2em;
+            .a-services__list{
+                width: 30%;
+                // li{
+                    
+                //     img{
+    
+                //     }
+        
+                //     span{
+    
+                //     }
+                // }
+            }
+        
+            .a-services__desc{
+                width: 40%;
+            }
+        }
+        
+    }
+
+}

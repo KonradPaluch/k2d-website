@@ -1,0 +1,20 @@
+.m-contact__container{
+
+    // .a-contact__title{
+
+    // }
+
+    .m-contact__form{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        label{
+            display: block;
+        }
+
+    }
+}
+

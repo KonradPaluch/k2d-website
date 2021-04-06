@@ -46,3 +46,27 @@
     }
 
 }
+
+@media only screen and (min-width: 750px){
+    .m-hero__container{
+        .a-hero__main{
+            font-size: 2em;
+        }
+        .a-hero__desc{
+            font-size: 1em;
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    
+    .m-hero__container{
+        .a-hero__main{
+            font-size: 2.5em;
+        }
+        .a-hero__desc{
+            font-size: 1.2em;
+        }
+    }
+
+}

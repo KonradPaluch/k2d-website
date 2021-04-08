@@ -1,20 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
 .m-contact__container{
+    margin: 8em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: poppins;
 
-    // .a-contact__title{
-
-    // }
+    .a-contact__title{
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
 
     .m-contact__form{
-
+        width: 60%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        align-items:center;
 
         label{
-            display: block;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1em;
+            color: #4B4B4B;
+
+            span{
+                color: #707070
+            }
+
+            input{
+                margin-top: 0.5em;
+                padding: 0.5em;
+                height: 2em;
+                border: 1px solid lightgray;
+                border-radius: 20px;
+                font-family: poppins;
+            }
+
+            textarea{
+                margin-top: 0.5em;
+                padding: 0.5em;
+                border: 1px solid lightgray;
+                border-radius: 20px;
+                font-family: poppins;
+                resize: vertical;
+                height: 10em;
+
+            }
         }
 
+        .a-contact__submit{
+            color: #FFFFFF;
+            background-color: #0083CE;
+            border: 3px solid #0083CE;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 1em;
+            padding: 0.3em 0.8em;
+
+        }
     }
 }
 
+
+@media only screen and (min-width: 900px){
+    .m-contact__container{
+
+        .a-contact__title{
+            font-size: 1.8em;
+        }
+        .m-contact__form{
+
+            label{
+
+                input,textarea{
+                    padding: 0.5em 0.8em;
+                    font-size: 1rem;
+                }
+            }
+
+            .a-contact__submit{
+                font-size: 1.1em;
+                font-weight: bold;
+                margin-top: 1em;
+                padding: 0.4em 0.8em;
+    
+            }
+        }    
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .m-contact__container{
+
+        .a-contact__title{
+            font-size: 2em;
+        }
+        .m-contact__form{
+            font-size: 1.2rem;
+
+            label{
+
+                input,textarea{
+                    padding: 0.5em 0.8em;
+                    font-size: 1rem;
+                }
+            }
+
+            .a-contact__submit{
+                font-size: 1.3em;
+                font-weight: bold;
+                margin-top: 1em;
+                padding: 0.4em 0.8em;
+    
+            }
+
+        }    
+    }
+}

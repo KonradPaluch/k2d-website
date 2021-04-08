@@ -1,50 +1,35 @@
-import React, {useReducer} from 'react';
+import React, {useState} from 'react';
 import './Contact.scss'
 
 export const Contact : React.FC = () => {
 
-    type State = { 
-        email: string;
-        name: string;
-        topics: string
-    }
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
-    type NewState = {
-        [name: string]: string;
-    }
-
-    const handleSubmit = (e : React.FormEvent<HTMLFormElement>) => {
-        console.log('Message will be sent. Email: ' + inputValues.email + ' Imie: ' + inputValues.name + ' Temat: ' + inputValues.topics);
-        e.preventDefault();
-    }
-
-    const handleInput = (event : React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = event.target;
-        setInputValues({ [name]: value });
-        console.log(name + ' ' + value)
+    const handleEmail = (event : React.ChangeEvent<HTMLInputElement>) => {
+        const { value } = event.target;
+        setEmail(value);
     };
 
-    const [inputValues, setInputValues] = useReducer(
-        (state : State, newState : NewState) => ({ ...state, ...newState }),
-        {
-            email: '',
-            name: '',
-            topics: ''
-        }
-    );
+    const handleMessage = (event : React.ChangeEvent<HTMLTextAreaElement>) => {
+        const { value } = event.target;
+        setMessage(value);
+    };
+
+    const handleSubmit = (e : React.FormEvent<HTMLFormElement>) => {
+
+        e.preventDefault();
+    }
 
     return(
         <section className='m-contact__container'>
             <div className='a-contact__title'>Skontaktuj się z nami!</div>
             <form onSubmit={handleSubmit} className='m-contact__form'>
                 <label>Email
-                    <input type="text" name='email' placeholder='Email' value={inputValues.email} onChange={handleInput}/>
+                    <input type="text" placeholder='' value={email} onChange={handleEmail}/>
                 </label>
-                <label>Imię i nazwisko
-                    <input type="text" name='name' placeholder='Imię i nazwisko' value={inputValues.name} onChange={handleInput}/> 
-                </label>
-                <label>Temat
-                    <input type="text" name='topics' placeholder='Temat' value={inputValues.topics} onChange={handleInput}/>
+                <label><div>Wiadomość <span>(opcjonalna)</span></div>
+                    <textarea placeholder='' value={message} onChange={handleMessage}/>
                 </label>
                 <input className='a-contact__submit' type="submit" value='Wyślij'/>
             </form>

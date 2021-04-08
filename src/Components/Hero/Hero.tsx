@@ -11,7 +11,7 @@ export const Hero = () => {
             <div className='a-hero__desc'>
                 K2D to zespół ekspertów gotowy realizować wszelkie zadania związane z utrzymaniem i rozwojem systemu SAP HR.
             </div>
-            <button className='a-hero__cta'><div className='a-hero__text'>Sprawdź nasze usługi</div></button>
+            <button className='a-hero__cta'>Sprawdź nasze usługi</button>
             <ScrollDown className='a-hero__scroll'/>
         </div>
     )

@@ -17,9 +17,35 @@ export const Contact : React.FC = () => {
     };
 
     const handleSubmit = (e : React.FormEvent<HTMLFormElement>) => {
-
+        callBackendAPI()
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
         e.preventDefault();
     }
+
+    const callBackendAPI = async () => {
+        console.log('backend call');
+        const data : {email : string, message : string} = {
+            email: email,
+            message: message
+        }
+        
+        const response = await fetch('http://localhost:5000/send_email',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            mode: 'cors',
+            body: JSON.stringify(data)
+        }
+        );
+
+        const body = await response.json();
+        if (response.status !== 200) {
+        throw Error(body.message) 
+        }
+        return body;
+    };
 
     return(
         <section className='m-contact__container'>

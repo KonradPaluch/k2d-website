@@ -1,0 +1,18 @@
+.a-divider__basic{
+    &.vertical{
+        border-left-width: 2px;
+        border-left-style: solid;
+        // height: 100%;
+    }
+    &.horizontal{
+        border-top-width: 2px;
+        border-top-style: solid;        
+        width: 100%;
+    }
+    &.light{
+        border-color: white;
+    }
+    &.dark{
+        border-color: black;
+    }
+}

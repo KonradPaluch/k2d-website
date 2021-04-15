@@ -48,7 +48,7 @@ export const Contact : React.FC = () => {
     };
 
     return(
-        <section className='m-contact__container'>
+        <div id='contact' className='m-contact__container'>
             <div className='a-contact__title'>Skontaktuj się z nami!</div>
             <form onSubmit={handleSubmit} className='m-contact__form'>
                 <label>Email
@@ -59,6 +59,6 @@ export const Contact : React.FC = () => {
                 </label>
                 <input className='a-contact__submit' type="submit" value='Wyślij'/>
             </form>
-        </section>
+        </div>
     )
 }

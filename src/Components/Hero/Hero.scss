@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 .m-hero__container{
-    margin-top: 8em;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -9,6 +8,7 @@
     font-family: poppins;
 
     .a-hero__main{
+        margin-top: 8rem;
         padding: 0 0.6em;
         width: fit-content;
         text-align: center;
@@ -36,10 +36,12 @@
         margin-top: 3em;
         color: #0083CE;
         padding: 0.8em;
+        cursor: pointer;
     }
 
     .a-hero__scroll{
         margin-top: 3em;
+        cursor: pointer;
     }
 
 }

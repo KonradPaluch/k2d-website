@@ -5,7 +5,7 @@ import BulletPoint from '../Assets/bullet-point.png';
 
 export const Services : React.FC = () => {
     return(
-        <section className='m-services__container'>
+        <div id="services" className='m-services__container'>
             <div className='a-services__title'>USŁUGI SAP</div>
             <div className='m-services__texts'>
                 <ul className='a-services__list'>
@@ -32,8 +32,6 @@ export const Services : React.FC = () => {
                     systemu SAP HR.
                 </div>
             </div>
-
-
-        </section>
+        </div>
     )
 }

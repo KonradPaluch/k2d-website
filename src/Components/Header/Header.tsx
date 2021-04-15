@@ -32,7 +32,7 @@ export const Header : React.FC = () => {
                     <ul className='a-navBar__list'>
                         <li><Link containerId='app' offset={-150} to='home' className='a-navBar__item' onClick={()=>hideMenu()} activeClass='active' spy={true} smooth={true}>Strona główna</Link></li>
                         <li><Link containerId='app' offset={-100} to='services' className='a-navBar__item' onClick={()=>hideMenu()} activeClass='active' spy={true} smooth={true}>Usługi</Link></li>
-                        <li><Link containerId='app' offset={-100} to='contact' className='a-navBar__item' onClick={()=>hideMenu()} activeClass='active' spy={true} smooth={true}>Kontakt</Link></li>
+                        <li><Link containerId='app' offset={-50} to='contact' className='a-navBar__item' onClick={()=>hideMenu()} activeClass='active' spy={true} smooth={true}>Kontakt</Link></li>
                     </ul>
                     <div className='a-navBar__close' onClick={()=>hideMenu()}><CloseMenu/></div>
                 </div>

@@ -2,13 +2,14 @@
 
 .m-contact__container{
     // margin: 8em 0;
-    padding: 8em 0;
+    margin-bottom: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: poppins;
 
     .a-contact__title{
+        padding-top: 8rem;
         font-weight: bold;
         font-size: 1.5em;
         margin-bottom: 1em;
@@ -50,6 +51,21 @@
                 resize: vertical;
                 height: 10em;
 
+            }
+        }
+
+        .m-contact__consent{
+            display: flex;
+            flex-direction: row;
+
+            .a-contact__check{
+                margin-top: 0.5rem;
+                height: 1.3em; 
+            }
+
+            .a-contact__text{
+                margin: 0.5rem 0 0 0.3rem;
+                font-size: 0.7rem;
             }
         }
 

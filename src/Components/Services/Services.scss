@@ -3,7 +3,7 @@
 .m-services__container{
     background-color: #4B4B4B;
     color: #FFFFFF;
-    margin-top: 10em;
+    // margin-top: 10em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +56,7 @@
     
     
         .a-services__title{
-            font-size: 1.8em;
+            font-size: 1.6em;
         }
     
         .m-services__texts{
@@ -68,16 +68,6 @@
                 margin: 0;
                 padding: 0;
                 width: 40%;
-                // li{
-                    
-                //     img{
-    
-                //     }
-        
-                //     span{
-    
-                //     }
-                // }
             }
         
             .a-services__desc{
@@ -95,12 +85,12 @@
     
     
         .a-services__title{
-            font-size: 2em;
+            font-size: 1.8em;
         }
     
         .m-services__texts{
 
-            font-size: 1.2em;
+            font-size: 1em;
             .a-services__list{
                 width: 30%;
                 // li{

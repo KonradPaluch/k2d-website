@@ -5,9 +5,14 @@
     background-color: white;
     display: flex;
     align-items: center;
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
     place-content: space-between;
     font-family: poppins;
+
+    .a-header__logo{
+        height: 53px;
+        width: auto;
+    }
 
     &.open, &.close{
         position: unset;
@@ -132,6 +137,10 @@
     li{
         margin-bottom: 3em;
         font-size: 1rem;
+        &:focus{
+            outline: none;
+            font-weight: bold;
+        }
 
         .a-navBar__item{
             cursor: pointer;
@@ -139,6 +148,7 @@
             &.active{
                 font-weight: bold;
             }
+
         }
     }
 }
@@ -193,7 +203,7 @@
     .m-header__container{ 
         display: flex;
         align-items: center;
-        padding: 1.5rem 5rem;
+        padding: 1rem 5rem;
         place-content: space-between;
     }
 

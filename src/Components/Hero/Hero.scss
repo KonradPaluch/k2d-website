@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 .m-hero__container{
+    padding-top: 10rem;
+    padding-bottom: 8rem;
     display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     font-family: poppins;
+    background-image: url(../Assets/hero-background.png);
+    background-size: cover;
+    background-position: center;
 
     .a-hero__main{
-        margin-top: 8rem;
         padding: 0 0.6em;
         width: fit-content;
         text-align: center;
@@ -27,16 +31,22 @@
     
     .a-hero__cta{
         background: none;
-        border: solid #0083CE 3px;
+        border: solid #00aeeb 2px;
         border-radius: 25px;
         width: fit-content;
         font-family: poppins;
         font-weight: 700;
         font-size: 1em;
         margin-top: 3em;
-        color: #0083CE;
+        color: #00aeeb;
         padding: 0.8em;
         cursor: pointer;
+        &:focus{
+            outline: none;
+            color: #FFFFFF;
+            border-color: white;
+            background-color: #00aeeb;
+        }
     }
 
     .a-hero__scroll{
@@ -61,7 +71,7 @@
     
     .m-hero__container{
         .a-hero__main{
-            font-size: 2.5em;
+            font-size: 2.3em;
         }
         .a-hero__desc{
             font-size: 1.2em;

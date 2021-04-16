@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 
+@keyframes error-shake{ 
+    25%{transform: translate( 4px, 0 )}
+    75%{transform: translate( -4px, 0 )}
+    100%{transform: translate( 0px, 0 )}
+}
+
 .m-contact__container{
-    // margin: 8em 0;
-    margin-bottom: 8rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: poppins;
 
     .a-contact__title{
-        padding-top: 8rem;
         font-weight: bold;
         font-size: 1.5em;
         margin-bottom: 1em;
@@ -21,18 +26,22 @@
         flex-direction: column;
         justify-content: space-between;
         align-items:center;
+        
+        .a-contact__error {
+         
+            color: red;
+            visibility: hidden;
 
-        label{
+            &.active{ 
+                visibility: visible;
+            }
+        }
+        .m-contact__email{
             width: 100%;
             display: flex;
             flex-direction: column;
             margin-bottom: 1em;
             color: #4B4B4B;
-
-            span{
-                color: #707070
-            }
-
             input{
                 margin-top: 0.5em;
                 padding: 0.5em;
@@ -40,7 +49,28 @@
                 border: 1px solid lightgray;
                 border-radius: 20px;
                 font-family: poppins;
+
+                &:focus{
+                    outline: none;
+                    box-shadow: 2px 2px 2px #00aeeb;
+                }
             }
+
+            &.error{
+                animation-duration: 0.4s;
+                animation-name: error-shake;
+                input{
+                    background-color: rgb(255, 179, 179);
+                }
+            }
+        }
+
+        .m-contact__message{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1em;
+            color: #4B4B4B;
 
             textarea{
                 margin-top: 0.5em;
@@ -49,35 +79,64 @@
                 border-radius: 20px;
                 font-family: poppins;
                 resize: vertical;
-                height: 10em;
+                height: 8em;
 
+                &:focus{
+                    outline: none;
+                    box-shadow: 2px 2px 2px #00aeeb;
+                }
             }
+
+            span{
+                color: #707070
+            }
+
         }
 
         .m-contact__consent{
+            width: 100%;
             display: flex;
             flex-direction: row;
-
+            color: #4B4B4B;
+            
+            .a-contact__text{
+                margin: 0.5rem 0 0 0.3rem;
+                font-size: 0.7rem;
+                // background-color: white;
+                // border-radius: 20px;
+                // border: 1px solid lightgray;
+                // padding: 0.5em;
+            }
+            
             .a-contact__check{
                 margin-top: 0.5rem;
                 height: 1.3em; 
             }
-
-            .a-contact__text{
-                margin: 0.5rem 0 0 0.3rem;
-                font-size: 0.7rem;
+            
+            &.error{
+                animation-duration: 0.4s;
+                animation-name: error-shake;
+                .a-contact__text{
+                    color:red;
+                }
             }
         }
 
         .a-contact__submit{
-            color: #FFFFFF;
-            background-color: #0083CE;
-            border: 3px solid #0083CE;
+            color: #00aeeb;
+            background-color: #FFFFFF;
+            border: 2px solid #00aeeb;
             border-radius: 25px;
             font-size: 1em;
             font-weight: bold;
             margin-top: 1em;
             padding: 0.3em 0.8em;
+            
+            &:focus{
+                outline: none;
+                color: #FFFFFF;
+                background-color: #00aeeb;
+            }
 
         }
     }
@@ -86,7 +145,9 @@
 
 @media only screen and (min-width: 900px){
     .m-contact__container{
-
+        // background-image: url(../Assets/contact-background.png);
+        // background-size: cover;
+        // background-position: center;
         .a-contact__title{
             font-size: 1.8em;
         }
@@ -115,21 +176,21 @@
     .m-contact__container{
 
         .a-contact__title{
-            font-size: 2em;
+            font-size: 1.8em;
         }
         .m-contact__form{
-            font-size: 1.2rem;
+            font-size: 1.1rem;
 
             label{
 
                 input,textarea{
                     padding: 0.5em 0.8em;
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                 }
             }
 
             .a-contact__submit{
-                font-size: 1.3em;
+                font-size: 1rem;
                 font-weight: bold;
                 margin-top: 1em;
                 padding: 0.4em 0.8em;

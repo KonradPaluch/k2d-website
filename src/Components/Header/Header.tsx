@@ -6,7 +6,7 @@ import { ReactComponent as BurgerMenu } from '../Assets/burger-menu.svg';
 import { ReactComponent as CloseMenu } from '../Assets/closeMenu.svg';
 
 export const Header : React.FC = () => {
-    const [navBarMod, setNavBarMod] = useState('hidden')
+    const [navBarMod, setNavBarMod] = useState('hidden');
 
     const showMenu = () => {
         setNavBarMod('open');

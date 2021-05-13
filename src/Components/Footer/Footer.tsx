@@ -10,7 +10,7 @@ export const Footer = () => {
                 <Divider style={`a-divider__basic vertical light`}/>
                 <div className='a-footer__text'>
                     <div>Biuro:</div>
-                    <div>ul.Rayskiego 5/70</div>
+                    <div>ul. Rayskiego 5/70</div>
                     <div>01-307 Warszawa</div> 
                 </div>
                 <Divider style={`a-divider__basic vertical light`}/>

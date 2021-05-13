@@ -9,6 +9,11 @@
     align-items: center;
     font-family: poppins;
 
+    ul{
+        padding: 0;
+        margin: 0;
+    }
+
     .a-services__title{
         margin-top: 3em;
         font-size: 1.5em;
@@ -20,17 +25,23 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 8em;
+        margin-top: 2em;
     
         .a-services__list{
-            margin: 2em 0;
-            padding: 0 3em;
+            // margin: 2em 0;
+            // padding: 0 3em;
             list-style-image: none;
+            width: 80%;
     
             li{
                 margin-bottom: 2em;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
     
                 img{
                     width: 16px;
@@ -42,37 +53,27 @@
                 }
             }
         }
-    
-        .a-services__desc{
-            padding: 0 4em;
-            font-size: 0.9em;
-        }
     }
 }
 
 @media only screen and (min-width: 900px){
 
     .m-services__container{
-    
-    
         .a-services__title{
             font-size: 1.6em;
         }
     
         .m-services__texts{
-            flex-direction: row-reverse;
+            flex-direction: row;
             justify-content: space-evenly;
             margin-top: 5em;
             
             .a-services__list{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
                 margin: 0;
                 padding: 0;
-                width: 40%;
-            }
-        
-            .a-services__desc{
-                padding: 0;
-                font-size: 1em;
                 width: 40%;
             }
         }
@@ -89,24 +90,9 @@
         }
     
         .m-services__texts{
-
             font-size: 1em;
             .a-services__list{
-                width: 30%;
-                // li{
-                    
-                //     img{
-    
-                //     }
-        
-                //     span{
-    
-                //     }
-                // }
-            }
-        
-            .a-services__desc{
-                width: 40%;
+                width: 45%;
             }
         }
         

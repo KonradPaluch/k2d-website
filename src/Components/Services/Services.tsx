@@ -11,26 +11,19 @@ export const Services : React.FC = () => {
                 <ul className='a-services__list'>
                     <li><img src={BulletPoint} alt=' '/><span>Utrzymanie systemu SAP HCM</span></li>
                     <li><img src={BulletPoint} alt=' '/><span>Rozwój systemu SAP HCM</span></li>
-                    <li><img src={BulletPoint} alt=' '/><span>Audyty HCM i optymalizacja rozwiązań ABAP</span></li>
-                    <li><img src={BulletPoint} alt=' '/><span>Implementacja rozwiązań w środowisku SAP Cloud Platform</span></li>
+                    <li><img src={BulletPoint} alt=' '/><span>Dedykowane rozwiązania do SAP HR</span></li>
+                    <li><img src={BulletPoint} alt=' '/><span>Audyt funkcjonujących rozwiązań SAP HCM</span></li>
+                    <li><img src={BulletPoint} alt=' '/><span>Optymalizacja raportów ABAP w SAP HCM</span></li>
+                    <li><img src={BulletPoint} alt=' '/><span>Budowanie aplikacji i wdrażanie rozwiązań w technologii SAP FIORI, UI5</span></li>
                 </ul>
-                <div className='a-services__desc'>
-                    K2D to nowoczesna firma założona przez grupę 
-                    doświadczonych konsultantów współpracujących ze 
-                    sobą od wielu lat. Specjalizujemy się we wdrażaniu i 
-                    obsłudze systemów SAP HCM oraz SAP Cloud 
-                    Platform. To, co nas wyróżnia w gąszczu firm 
-                    konsultingowych, to ekspercka struktura zespołu. Do 
-                    projektów dedykowani są tylko wyspecjalizowani 
-                    konsultanci z wieloletnim doświadczeniem w danej 
-                    dziedzinie. W naszym modelu działania nie tylko 
-                    słuchamy klienta i realizujemy jego potrzeby. 
-                    Uczestnicząc w wielu projektach, znamy aktualne 
-                    trendy, nowoczesne rozwiązania i jesteśmy w stanie 
-                    proponować sprawdzone narzędzia, które ułatwiają 
-                    pracę i maksymalizują efekty wykorzystywania 
-                    systemu SAP HR.
-                </div>
+                <ul className='a-services__list'>
+                    <li><img src={BulletPoint} alt=' '/><span>Opracowanie rozwiązań do samoobsługi w SAP HR</span></li>
+                    <li><img src={BulletPoint} alt=' '/><span>Wdrożenie rozwiązań SAP Cloud Platform</span></li>
+                    <li><img src={BulletPoint} alt=' '/><span>Budżetowanie wynagrodzeń w SAP HCM</span></li>
+                    <li><img src={BulletPoint} alt=' '/><span>Automatyzacja zadań w SAP HCM</span></li>
+                    <li><img src={BulletPoint} alt=' '/><span>Migracja danych w SAP HCM</span></li>
+                    <li><img src={BulletPoint} alt=' '/><span>Pogotowie serwisowe SAP HR</span></li>
+                </ul>
             </div>
         </div>
     )
